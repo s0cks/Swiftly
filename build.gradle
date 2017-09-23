@@ -1,0 +1,16 @@
+group 'com.tazzvose'
+version '1.0.0.0'
+
+repositories{
+    mavenCentral()
+    jcenter()
+}
+
+apply from: "gradle/scripts/dependencies.gradle"
+apply from: "gradle/scripts/jvm.gradle"
+
+dependencies{
+    testCompile "junit:junit:${getDependency("junit")}"
+    compile "org.slf4j:slf4j-api:${getDependency("slf4j")}"
+    compile "org.slf4j:slf4j-simple:${getDependency("slf4j")}"
+}
